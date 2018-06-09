@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="SqlDataSourceStorage">
+    <option name="dataSources">
+      <list>
+        <State>
+          <option name="id" value="7ba07257-4d8a-4fc9-96e3-1a3bde28ea7b" />
+          <option name="name" value="agregator (2)" />
+          <option name="urls">
+            <array>
+              <option value="file://$USER_HOME$/Downloads/agregator (2).sql" />
+            </array>
+          </option>
+        </State>
+        <State>
+          <option name="id" value="b4b3c490-0883-476d-8b2b-a6e26735d2c5" />
+          <option name="name" value="motherboard_price" />
+          <option name="urls">
+            <array>
+              <option value="file://$USER_HOME$/Downloads/motherboard_price.sql" />
+            </array>
+          </option>
+        </State>
+      </list>
+    </option>
+  </component>
+</project>

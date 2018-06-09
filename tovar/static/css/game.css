@@ -1,0 +1,54 @@
+.banner_ {
+    height: 400px;
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+.name{
+    color: #76b900;
+    font-weight: 900;
+}
+
+.row_c{
+    height: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.cl{
+    cursor: pointer;
+}
+
+.left_c{
+    height: 20%;
+    background-color: #e6e6e6;
+}
+
+.hd{
+    overflow: hidden;
+}
+
+.right_c{
+    height: 80%;
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+
+}
+.right_c:hover{
+ -webkit-transform: scale(1.1);
+ -moz-transform: scale(1.1);
+ -o-transform: scale(1.1);
+}
+.right_c{
+ -moz-transition: all 0.5s ease-out;
+ -o-transition: all 0.5s ease-out;
+ -webkit-transition: all 0.5s ease-out;
+ }
+
+.card_game {
+    height: 360px;
+    overflow: hidden;
+    background-color: palegreen
+}

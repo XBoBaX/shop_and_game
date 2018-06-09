@@ -1,0 +1,24 @@
+{% load staticfiles %}
+<div class="container-fluid">
+    <div class="row" style="height: 60px">
+        <div class="offset-8 col-md-4" style="border-radius: 0 0 0 20px; background-color: black;">
+            <div class="row h-100">
+                <div onclick="window.location.href = '/my/logout'" class="col-12 h-100 exit click" style="border-radius: 0 0 0 20px;"><span class="center">Выйти</span></div>
+            </div>
+        </div>
+    </div>
+    {% for ch in bd %}
+    <div class="row" style="margin-top: 10px">
+        <div class="col-md-10 offset-1" style="padding:10px;  padding-left: 30px; background-color: white; min-height: 100%; border: 1px silver solid; width: 100%; border-radius: 20px">
+            <div class="row">
+                <div class="col-12"><h3>Название игры: {{ ch.name }}</h3></div>
+                <div class="col-12">Материнка: {{ ch.mother.name }}</div>
+                <div class="col-12">Процессор: {{ ch.proc.name }}</div>
+                <div class="col-12">RAM память: {{ ch.operative.name }}</div>
+                <div class="col-12">видео-карта: {{ ch.video.name }}</div>
+                <div class="col-12"><h4>Стоимость: {{ ch.price }}</h4></div>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>

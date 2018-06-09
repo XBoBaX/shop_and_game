@@ -1,0 +1,58 @@
+{% load staticfiles %}
+<form id="{% if gl == 1 or gl == 12 %}sro{% else %}src{% endif %}" role="form">{% csrf_token %}
+    <header>
+        <div class="container">
+            <div class="row h-100">
+                <input type="hidden" id="list1" name="list1">
+                <input type="hidden" id="list2" name="list2">
+                <input type="hidden" id="list3" name="list3">
+                <input type="hidden" id="list4" name="list4">
+                <input type="hidden" name="sel1" id="sel1">
+                <input type="hidden" name="sel2" id="sel2">
+                <input type="hidden" name="sel3" id="sel3">
+                <input type="hidden" name="sel4" id="sel4">
+                <input type="hidden" name="sel5" id="sel5">
+                <input type="hidden" name="sel6" id="sel6">
+                <input type="hidden" name="sel7" id="sel7">
+                <input type="hidden" name="sel8" id="sel8">
+                <div onclick="window.location.href='/'" class="pad0 col-md-2 d-none d-md-block" style="cursor: pointer">
+                    <span class="center col_hed">Seller</span></div>
+                <div id="gl" onclick="set_active(this);" class="pad0 col-md-2 col-3 click active"><span
+                        class="center col_hed">Главная</span></div>
+                <div id="gm" onclick="set_active(this);" class="pad0 col-md-2 col-3 click"><span class="center col_hed">Подбор игр</span>
+                </div>
+                {% if username %}
+                    <div id="me" onclick="window.location.href='/my/profile/'"
+                         class="pad0 offset-md-2 offset-1 col-md-4 col-3 click">
+                        <span class="center col_hed">Аккаунт ({{ username }})</span>
+                    </div>
+                {% else %}
+                    <div id="me" onclick="window.location.href='/my/'"
+                         class="pad0 offset-md-2 offset-1 col-md-4 col-3 click">
+                        <span class="center col_hed">Войти</span>
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+        {% if gl == 0 or gl == 1 or gl == 12 %}
+            <div class="row h-100 d-none d-md-block" id="open">
+                <div class="offset-md-9 col-md-2 pad0" id="cl">
+                    <div class="open"><span class="center col_hed" id="opCl">Скрыть</span></div>
+                </div>
+            </div>
+            <div class="row poisk" style="height: 100%" id="poisk">
+                <div class="col-5 offset-1 pad0">
+                    <input id="ser" name="search" class="center inp" type="text"
+                           placeholder="{% if gl == 1 or gl == 12 %}Поиск комплектующего{% else %}Поиск игр{% endif %}">
+                    <span class="right d-none d-md-block"><img class="" style="width: 35%"
+                                                               src="{% static 'img/poisk.png' %}"></span>
+                </div>
+                <div class="col-2">
+                    <input type="submit" class="btn left btn_poisk" value="Поиск">
+                </div>
+            </div>
+
+        {% endif %}
+        </div>
+    </header>
+{% if gl != 12 %}</form>{% endif %}

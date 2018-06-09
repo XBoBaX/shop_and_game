@@ -1,0 +1,28 @@
+{% load staticfiles %}
+
+<div class="container-fluid bd">
+    <div class="row">
+        <div class="offset-2 col-8" align="center" style="margin-bottom: 30px">
+            <h1 class="h1">Подбор комплектующих под игру</h1>
+        </div>
+    </div>
+    <div class="row">
+        {% for ch in gam %}
+            <div id="{{ ch.name }}" onclick="go_game('{{ ch.name }}')" class="col-md-6 col-12 cl"
+                 style="margin-bottom: 30px">
+                <div class="card_game">
+                    <div class="row row_c">
+                        <div class="col-12 left_c" align="center">
+                            <h1 class="name center">{{ ch.name }}</h1>
+                        </div>
+                        <div class="col-12 pad0 hd h-100">
+                            <div class="right_c"
+                                 style="background-image: url({% if ch.img %}{{ ch.img.url }}{% endif %})">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</div>

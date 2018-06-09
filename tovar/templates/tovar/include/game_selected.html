@@ -1,0 +1,70 @@
+<div class="container-fluid game_"
+     style="min-height: 100%; height: 100vh; background-image: url({% if game.img %}{{ game.img.url }}{% endif %}); background-repeat: no-repeat; background-size: cover;">
+    <div class="row" style="height: 60px; background-color: black">
+        <div onclick="window.location.href = '/games/'" class="col-1"
+             style="background-color: #76b900; cursor: pointer; height: 60px">
+            <svg style="height: 60px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+					 xmlns:xlink="http://www.w3.org/1999/xlink"
+					 x="0px" y="0px"
+					 viewBox="0 0 31.494 31.494" style="enable-background:new 0 0 31.494 31.494;" xml:space="preserve">
+			<path style="fill:#1E201D;" d="M10.273,5.009c0.444-0.444,1.143-0.444,1.587,0c0.429,0.429,0.429,1.143,0,1.571l-8.047,8.047h26.554
+	c0.619,0,1.127,0.492,1.127,1.111c0,0.619-0.508,1.127-1.127,1.127H3.813l8.047,8.032c0.429,0.444,0.429,1.159,0,1.587
+	c-0.444,0.444-1.143,0.444-1.587,0l-9.952-9.952c-0.429-0.429-0.429-1.143,0-1.571L10.273,5.009z"/>
+		</svg>
+        </div>
+        <div class="col-11">
+            <h4 class="left" style="color: white; font-size: 150%;font-weight: 900">Подходящие комплектующие для игры {{ game.name }}</h4>
+            <div id="sekret">{{ game.name }}</div>
+        </div>
+    </div>
+    <div class="row" style="width: 100vw;min-height: 100%; height: 100vh;position: fixed;">
+        <div class="col-6 offset-6" style="background-color: rgba(150, 150, 150, 0.8); ">
+            <div class="row">
+                <div class="col-12" style="background-color: #52ff00; height: 40px"><span class="left">Минимальные требования</span></div>
+                <div class="row" style="padding: 20px">
+                    <div class="col-12" style="color: #52ff00">Видео-карта:</div>
+                    <div class="col-12" style="color: white;">
+                        <a href="{{ videocard_min.min_price_ad }}" style="color: white; text-decoration: none; border-bottom: 2px dashed white">{{ videocard_min }}</a>
+                    </div>
+                </div>
+                <div class="row" style="padding: 0 20px 20px;">
+                    <div class="col-12" style="color: #52ff00">Материнская плата:</div>
+                    <div class="col-12" style="color: white;"><a href="{{ mother_min.min_price_ad }}" style=" color: white; text-decoration: none; border-bottom: 2px dashed white">{{ mother_min }}</a></div>
+                </div>
+                <div class="row" style="padding: 20px; padding-top: 0">
+                    <div class="col-12" style="color: #52ff00">Процессор:</div>
+                    <div class="col-12" style="color: white;"><a href="{{ proc_min.min_price_ad }}" style=" color: white; text-decoration: none; border-bottom: 2px dashed white">{{ proc_min }}</a></div>
+                </div>
+                <div class="row" style="padding: 20px; padding-top: 0">
+                    <div class="col-12" style="color: #52ff00">Оперативная память:</div>
+                    <div class="col-12" style="color: white;"><a href="{{ ram_min.min_price_ad }}" style=" color: white; text-decoration: none; border-bottom: 2px dashed white">{{ ram_min }}</a></div>
+                </div>
+
+                <div class="col-12" style="background-color: #52ff00; height: 40px"><p id="min"  class="left" style="color: white; text-decoration-line: none; cursor: pointer">Цена сборки: <span style="color: red">{{ min_price }}</span> грн. Купить</p></div>
+                <div class="col-12" style="background-color: #52ff00; height: 40px"><span class="left">Оптимальные требования</span></div>
+
+
+                <div class="row" style="padding: 20px">
+                    <div class="col-12" style="color: #52ff00">Видео-карта:</div>
+                    <div class="col-12" style="color: white;"><a href="{{ videocard_max.min_price_ad }}" style=" color: white; text-decoration: none; border-bottom: 2px dashed white">{{ videocard_max }}</a></div>
+                </div>
+                <div class="row" style="padding: 20px; padding-top: 0">
+                    <div class="col-12" style="color: #52ff00">Материнская плата:</div>
+                    <div class="col-12" style="color: white;"><a href="{{ mother_max.min_price_ad }}" style=" color: white; text-decoration: none; border-bottom: 2px dashed white">{{ mother_max }}</a></div>
+                </div>
+                <div class="row" style="padding: 20px; padding-top: 0">
+                    <div class="col-12" style="color: #52ff00">Процессор:</div>
+                    <div class="col-12" style="color: white;"><a href="{{ proc_max.min_price_ad }}" style=" color: white; text-decoration: none; border-bottom: 2px dashed white">{{ proc_max }}</a></div>
+                </div>
+                <div class="row" style="padding: 20px; padding-top: 0">
+                    <div class="col-12" style="color: #52ff00">Оперативная память:</div>
+                    <div class="col-12" style="color: white;"><a href="{{ ram_max.min_price_ad }}" style=" color: white; text-decoration: none; border-bottom: 2px dashed white">{{ ram_max }}</a></div>
+                </div>
+                <div class="col-12" style="background-color: #52ff00; height: 40px"><p id="max" class="left" style="color: white; text-decoration-line: none; cursor: pointer">Цена сборки: <span style="color: red">{{ min_price2 }}</span> грн. Купить</p></div>
+
+            </div>
+        </div>
+    </div>
+
+
+</div>

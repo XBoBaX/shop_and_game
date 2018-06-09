@@ -1,0 +1,193 @@
+.body {
+    background-color: #f1f1f1;
+}
+
+.min_tr{
+    background-color: #76b900;
+}
+.max_tr{
+    background-color: #76b900;
+}
+
+.open {
+    background-color: black;
+    border: 20px solid transparent;
+    border-radius: 0 0 20px 20px;
+    cursor: pointer;
+    height: 60px;
+    position: relative;
+    z-index: 4;
+}
+
+.card_cat_ac img {
+    filter: blur(9px);
+}
+.card_cat_ac .black_box {
+    opacity: 0.5
+}
+.card_cat_ac p {
+    display: block;
+}
+
+.hr:hover{
+    text-decoration: underline;
+}
+
+header {
+    height: 60px;
+    background-color: black;
+    color: white;
+    position: relative;
+    z-index: 2;
+}
+
+header .container {
+    height: 100%;
+}
+
+header .row {
+    margin: 0;
+}
+
+#open {
+    position: absolute;
+    width: 100%;
+    left: 0;
+
+}
+
+.poisk {
+    overflow: hidden;
+    position: relative;
+    background-color: black;
+}
+
+.center.inp {
+    height: 80%;
+    width: 100%;
+    padding-left: 15px;
+    color: black;
+}
+
+.row .pad0 {
+    padding: 0;
+}
+
+.col_hed {
+    font-weight: bold;
+    font-size: 120%;
+}
+
+.center {
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)
+}
+
+.right {
+    position: absolute;
+    top: 47%;
+    left: 87%;
+    transform: translate(0, -50%)
+}
+
+.left {
+    position: absolute;
+    top: 47%;
+    transform: translate(0, -50%)
+}
+
+.btn.btn_poisk {
+    background-color: #76b900;
+    color: black;
+    font-weight: 600;
+}
+
+.container-fluid .game_{
+    font-size: 18pt;
+}
+
+.active {
+    background-color: rgba(81, 255, 0, 0.4);
+}
+
+.click:hover{
+    background-color: rgba(81, 255, 0, 0.4);
+    cursor: pointer;
+}
+
+.exit{
+    cursor: pointer;
+    color: white;
+    font-weight: 600;
+    font-size: 150%;
+}
+
+.bd {
+    min-height: 100%;
+    padding-top: 80px;
+}
+
+h1.h1 {
+    color: #76b900;
+}
+
+.card_cat {
+    height: 220px;
+    cursor: pointer;
+}
+
+.card_cat:hover {
+    box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.75);
+}
+
+.card_cat p {
+    color: white;
+    z-index: 2;
+    font-weight: 900;
+    font-size: 200%;
+    display: none;
+}
+
+.card_cat:hover p {
+    display: block;
+}
+
+.card_cat img {
+    height: 200px;
+    object-fit: contain;
+}
+
+.gobuy {
+    margin-top: 10px;
+    height: 400px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+.card_cat:hover img {
+    filter: blur(9px);
+}
+
+.card_cat:hover .black_box {
+    opacity: 0.5
+}
+
+.mr30 {
+    margin-bottom: 30px;
+}
+
+.black_box {
+    height: 100%;
+    background-color: black;
+    opacity: 0;
+}
+
+.black_box:hover {
+    opacity: 0.5;
+}

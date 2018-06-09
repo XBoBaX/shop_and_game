@@ -1,0 +1,38 @@
+{% load staticfiles %}
+<div class="container-fluid bd">
+    <div class="row">
+        <div class="offset-2 col-8" align="center" style="margin-bottom: 30px">
+            <h1 class="h1">Поиск комплектующих по категориям</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div id="c1" class="col-10 col-md-5 offset-md-1 mr30" onclick="poisk_('1')">
+            <div class="card_cat">
+                <p class="center">Процессоры</p>
+                <div class="black_box"></div>
+                <img src="{% static 'img/chip.png' %}" class="center" >
+            </div>
+        </div>
+        <div id="c2" class="col-12 col-md-5 mr30" onclick="poisk_('2')">
+            <div class="card_cat">
+                <p class="center">Видеокарты</p>
+                <div class="black_box"></div>
+                <img src="{% static 'img/video-card.png' %}" class="center" >
+            </div>
+        </div>
+        <div id="c3" class="col-12 col-md-5 offset-md-1 mr30" onclick="poisk_('3')">
+            <div class="card_cat">
+                <p class="center" align="center">Оперативная память</p>
+                <div class="black_box"></div>
+                <img src="{% static 'img/RAM.png' %}" class="center" >
+            </div>
+        </div>
+        <div id="c4" class="col-12 col-md-5 mr30" onclick="poisk_('4')">
+            <div class="card_cat">
+                <p class="center" align="center">Материнки</p>
+                <div class="black_box"></div>
+                <img src="{% static 'img/motherboard.png' %}" class="center" >
+            </div>
+        </div>
+    </div>
+</div>

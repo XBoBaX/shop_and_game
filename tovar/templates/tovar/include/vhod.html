@@ -1,0 +1,27 @@
+{% load staticfiles %}
+<form id="formVhod" role="form"  style="min-height: 100%; width: 100%; position: absolute">{% csrf_token %}
+
+    <div class="container-fluid bd" style="margin-bottom: 20px">
+        <div class="row">
+            <div class="col-10 offset-1 col-md-6 offset-md-3 form_reg">
+
+                <div class="row" align="center">
+                    <div class="col-12"><input type="text" placeholder="Логин" name="username" id="username"></div>
+                </div>
+                <div class="row" align="center">
+                    <div class="col-12"><input type="password" placeholder="Пароль" name="password" id="password"></div>
+                </div>
+                <div class="row" align="center">
+                    <div class="col-12"><input id="enter" type="submit" value="Войти"></div>
+                </div>
+                <div class="row" align="center">
+                    <div class="col-12">Нет аккаунта? <a href="/my/">Регистрация</a></div>
+                </div>
+                <div class="row" align="center">
+                    <div class="col-12"><label id="error-login"></label></div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</form>

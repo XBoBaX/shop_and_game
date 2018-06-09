@@ -1,0 +1,300 @@
+{% load staticfiles %}
+<div class="container-fluid">
+    <div class="row" style="background-color: black; height: 100%">
+        <div class="col-12"><h3 style="color: white">{{ obj.name }}</h3></div>
+    </div>
+    <div class="row" style="background-color: white;border: 1px solid silver;margin: 10px;border-radius: 20px;">
+        <div class="col-12">
+            <h4 style="color: #ff8d02">Цены от {{ obj.min_price }} грн</h4>
+            <p>Магазины:</p>
+            <ul>
+                {% if pr.adress1 != None and pr.price1 != None %}
+                    <li><a href="{{ pr.adress1 }}">{% if pr.price1 == 0 %}Нет в наличии{% else %}
+                        {{ pr.price1 }}{% endif %}</a></li>
+                {% endif %}
+                {% if pr.adress2 != None and pr.price2 != None %}
+                    <li><a href="{{ pr.adress2 }}">{% if pr.price2 == 0 %}Нет в наличии{% else %}
+                        {{ pr.price2 }}{% endif %}</a></li>
+                {% endif %}
+                {% if pr.adress3 != None and pr.price3 != None %}
+                    <li><a href="{{ pr.adress3 }}">{% if pr.price3 == 0 %}Нет в наличии{% else %}
+                        {{ pr.price3 }}{% endif %}</a></li>
+                {% endif %}
+                {% if pr.adress4 != None and pr.price4 != None %}
+                    <li><a href="{{ pr.adress4 }}">{% if pr.price4 == 0 %}Нет в наличии{% else %}
+                        {{ pr.price4 }}{% endif %}</a></li>
+                {% endif %}
+                {% if pr.adress5 != None and pr.price5 != None %}
+                    <li><a href="{{ pr.adress5 }}">{% if pr.price5 == 0 %}Нет в наличии{% else %}
+                        {{ pr.price5 }}{% endif %}</a></li>
+                {% endif %}
+                {% if pr.adress6 != None and pr.price6 != None %}
+                    <li><a href="{{ pr.adress6 }}">{% if pr.price6 == 0 %}Нет в наличии{% else %}
+                        {{ pr.price6 }}{% endif %}</a></li>
+                {% endif %}
+                {% if pr.adress7 != None and pr.price7 != None %}
+                    <li><a href="{{ pr.adress7 }}">{% if pr.price7 == 0 %}Нет в наличии{% else %}
+                        {{ pr.price7 }}{% endif %}</a></li>
+                {% endif %}
+            </ul>
+        </div>
+    </div>
+    {% if obj.its == "Proc" %}
+        <div class="row" style="background-color: white;border: 1px solid silver;margin: 10px;border-radius: 20px;">
+            <div class="col-12">
+                <h4>Характеристики процессора:</h4>
+            </div>
+            {% if obj.series != None %}
+                <div class="col-12 col-md-6">
+                    <p>Серия:{{ obj.series }}</p>
+                </div>
+            {% endif %}
+            {% if obj.count_core != None %}
+                <div class="col-12 col-md-6">
+                    <p>Количество ядер: {{ obj.count_core }} core</p>
+                </div>
+            {% endif %}
+            {% if obj.clock_freq != None %}
+                <div class="col-12 col-md-6">
+                    <p>Тактовая частота: {{ obj.clock_freq }} ГГц</p>
+                </div>
+            {% endif %}
+            {% if obj.freq != None %}
+                <div class="col-12 col-md-6">
+                    <p>Частота: {{ obj.freq }} ГГц</p>
+                </div>
+            {% endif %}
+            {% if obj.proc_tech != None %}
+                <div class="col-12 col-md-6">
+                    <p>Техпроцесс: {{ obj.proc_tech }}</p>
+                </div>
+            {% endif %}
+            {% if obj.architecture != None %}
+                <div class="col-12 col-md-6">
+                    <p>Архитектура: {{ obj.architecture }}</p>
+                </div>
+            {% endif %}
+            {% if obj.model_GPU != None %}
+                <div class="col-12 col-md-6">
+                    <p>Интегрированная графика: {{ obj.model_GPU }}</p>
+                </div>
+            {% endif %}
+            {% if obj.L1 != None %}
+                <div class="col-12 col-md-6">
+                    <p>Кэш 1-го уровня: {{ obj.L1 }}</p>
+                </div>
+            {% endif %}
+            {% if obj.L2 != None %}
+                <div class="col-12 col-md-6">
+                    <p>Кэш 2-го уровня: {{ obj.L2 }}</p>
+                </div>
+            {% endif %}
+            {% if obj.L3 != None %}
+                <div class="col-12 col-md-6">
+                    <p>Кэш 3-го уровня: {{ obj.L3 }}</p>
+                </div>
+            {% endif %}
+            {% if obj.TDP != None %}
+                <div class="col-12 col-md-6">
+                    <p>Тепловыделение: {{ obj.TDP }}</p>
+                </div>
+            {% endif %}
+            {% if obj.sup_instr != None %}
+                <div class="col-12 col-md-6">
+                    <p>Инструкции: {{ obj.sup_instr }}</p>
+                </div>
+            {% endif %}
+            {% if obj.sup_instr != None %}
+                <div class="col-12 col-md-6">
+                    <p>Сокет: {{ obj.sok.name }}</p>
+                </div>
+            {% endif %}
+            <div class="col-12">
+                <h4>Оперативная память</h4>
+            </div>
+            {% if obj.max_vol != None %}
+                <div class="col-12 col-md-6">
+                    <p>Максимальное кол-во ОП: {{ obj.max_vol }}</p>
+                </div>
+            {% endif %}
+            {% if obj.max_kanal != None %}
+                <div class="col-12 col-md-6">
+                    <p>Максимальная частота ОП: {{ obj.max_kanal }}</p>
+                </div>
+            {% endif %}
+        </div>
+    {% elif obj.its == "Motherboard" %}
+        <div class="row" style="background-color: white;border: 1px solid silver;margin: 10px;border-radius: 20px;">
+            <div class="col-12">
+                <h4>Характеристики материнской платы:</h4>
+            </div>
+            {% if obj.dly_chego != None %}
+                <div class="col-12 col-md-6">
+                    <p>Направление:{{ obj.dly_chego }}</p>
+                </div>
+            {% endif %}
+            {% if obj.BIOS != None %}
+                <div class="col-12 col-md-6">
+                    <p>BIOS: {{ obj.BIOS }}</p>
+                </div>
+            {% endif %}
+            {% if obj.factor_OP != None %}
+                <div class="col-12 col-md-6">
+                    <p>Форм фактор ОЗУ: {{ obj.factor_OP }}</p>
+                </div>
+            {% endif %}
+            {% if obj.sound != None %}
+                <div class="col-12 col-md-6">
+                    <p>Каналов звука: {{ obj.sound }}</p>
+                </div>
+            {% endif %}
+            {% if obj.form_factor != None %}
+                <div class="col-12 col-md-6">
+                    <p>Форм-фактор: {{ obj.form_factor }}</p>
+                </div>
+            {% endif %}
+            {% if obj.chipset != None %}
+                <div class="col-12 col-md-6">
+                    <p>Чипсет: {{ obj.chipset }}</p>
+                </div>
+            {% endif %}
+            {% if obj.OZU != None %}
+                <div class="col-12 col-md-6">
+                    <p>Слоты под ОЗУ: {{ obj.OZU }}</p>
+                </div>
+            {% endif %}
+            {% if obj.taktovaya != None %}
+                <div class="col-12 col-md-6">
+                    <p>Тактовая частота ОЗУ: {{ obj.taktovaya }}</p>
+                </div>
+            {% endif %}
+            {% if obj.otver != None %}
+                <div class="col-12 col-md-6">
+                    <p>Выходы: {{ obj.otver }}</p>
+                </div>
+            {% endif %}
+            {% if obj.pin_proc != None %}
+                <div class="col-12 col-md-6">
+                    <p>Pin процессора: {{ obj.pin_proc }}</p>
+                </div>
+            {% endif %}
+            {% if obj.sok != None %}
+                <div class="col-12 col-md-6">
+                    <p>Сокет: {{ obj.sok.name }}</p>
+                </div>
+            {% endif %}
+        </div>
+    {% elif obj.its == "Operative" %}
+        <div class="row" style="background-color: white;border: 1px solid silver;margin: 10px;border-radius: 20px;">
+            <div class="col-12">
+                <h4>Характеристики ОЗУ:</h4>
+            </div>
+            {% if obj.V_eto_obem != None %}
+                <div class="col-12 col-md-6">
+                    <p>Объем ОЗУ: {{ obj.V_eto_obem }}</p>
+                </div>
+            {% endif %}
+            {% if obj.count_comp != None %}
+                <div class="col-12 col-md-6">
+                    <p>Планок в комплекте: {{ obj.count_comp }}</p>
+                </div>
+            {% endif %}
+            {% if obj.DIMM != None %}
+                <div class="col-12 col-md-6">
+                    <p>Форм фактор: {{ obj.DIMM }}</p>
+                </div>
+            {% endif %}
+            {% if obj.DDR != None %}
+                <div class="col-12 col-md-6">
+                    <p>Тип памяти: {{ obj.DDR }}</p>
+                </div>
+            {% endif %}
+            {% if obj.freq != None %}
+                <div class="col-12 col-md-6">
+                    <p>Частота: {{ obj.freq }}</p>
+                </div>
+            {% endif %}
+            {% if obj.cooler != None %}
+                <div class="col-12 col-md-6">
+                    <p>Пропускная способность: {{ obj.cooler }}</p>
+                </div>
+            {% endif %}
+        </div>
+    {% elif obj.its == "Videocard" %}
+        <div class="row" style="background-color: white;border: 1px solid silver;margin: 10px;border-radius: 20px;">
+            <div class="col-12">
+                <h4>Характеристики видеокарты:</h4>
+            </div>
+            {% if obj.GPU != None %}
+                <div class="col-12 col-md-6">
+                    <p>GPU:{{ obj.GPU }}</p>
+                </div>
+            {% endif %}
+            {% if obj.memory_vol != None %}
+                <div class="col-12 col-md-6">
+                    <p>Объем памяти: {{ obj.memory_vol }}</p>
+                </div>
+            {% endif %}
+            {% if obj.type_memory != None %}
+                <div class="col-12 col-md-6">
+                    <p>Тип памяти: {{ obj.type_memory }}</p>
+                </div>
+            {% endif %}
+            {% if obj.bit_capacity != None %}
+                <div class="col-12 col-md-6">
+                    <p>Разрядность шины: {{ obj.bit_capacity }}</p>
+                </div>
+            {% endif %}
+            {% if obj.freq_of_work != None %}
+                <div class="col-12 col-md-6">
+                    <p>Частота работы GPU: {{ obj.freq_of_work }}</p>
+                </div>
+            {% endif %}
+            {% if obj.process_tech != None %}
+                <div class="col-12 col-md-6">
+                    <p>Техпроцесс: {{ obj.process_tech }}</p>
+                </div>
+            {% endif %}
+            {% if obj.max_resolution != None %}
+                <div class="col-12 col-md-6">
+                    <p>Макс. разрешение: {{ obj.max_resolution }}</p>
+                </div>
+            {% endif %}
+            {% if obj.directX != None %}
+                <div class="col-12 col-md-6">
+                    <p>DirectX: {{ obj.directX }}</p>
+                </div>
+            {% endif %}
+            {% if obj.openGL != None %}
+                <div class="col-12 col-md-6">
+                    <p>openGL: {{ obj.openGL }}</p>
+                </div>
+            {% endif %}
+            {% if obj.max_monitors != None %}
+                <div class="col-12 col-md-6">
+                    <p>Макс. мониторов: {{ obj.max_monitors }}</p>
+                </div>
+            {% endif %}
+            {% if obj.cooling != None %}
+                <div class="col-12 col-md-6">
+                    <p>Охлаждение: {{ obj.cooling }}</p>
+                </div>
+            {% endif %}
+            {% if obj.power != None %}
+                <div class="col-12 col-md-6">
+                    <p>Потребляемая мощность: {{ obj.power }}</p>
+                </div>
+            {% endif %}
+            {% if obj.length != None %}
+                <div class="col-12 col-md-6">
+                    <p>Длина видеокарты: {{ obj.length }}</p>
+                </div>
+            {% endif %}
+            {% if obj.interf != None %}
+                <div class="col-12 col-md-6">
+                    <p>Интерфейс: {{ obj.interf.name }}</p>
+                </div>
+            {% endif %}
+        </div>
+    {% endif %}
+</div>
